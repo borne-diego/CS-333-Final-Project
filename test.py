@@ -13,7 +13,7 @@ class boardTests(unittest.TestCase):
     self.assertEqual(self.board.board, [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
 
   def testisValidMoveOutOfBounds(self):
-    self.assertTrue(self.board.isValidMove(10, 9))
+    self.assertFalse(self.board.isValidMove(10, 9))
 
   def testisValidMoveInvalidBoardValue(self):
     self.board.board[0][0] = 7
